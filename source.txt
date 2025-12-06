@@ -1,0 +1,78 @@
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  digitalWrite(13, HIGH);
+  digitalWrite(12, HIGH);
+  delay(10000);
+
+  // Phase 1: Slow beeps (like early countdown)
+  for (int i = 0; i < 10; i++) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    delay(200);     
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    delay(1000);    
+  }
+
+  // Phase 2: Medium-speed beeps
+  for (int i = 0; i < 15; i++) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    delay(150);
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    delay(500);
+  }
+
+
+  // Phase 3: Fast beeps (panic phase)
+  for (int i = 0; i < 20; i++) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    delay(80);
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    delay(150);
+  }
+
+
+  // Phase 4: Very fast beeps (final)
+  for (int i = 0; i < 30; i++) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    delay(40);
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    delay(80);
+  }
+  for (int i = 0; i < 40; i++) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    delay(30);
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    delay(70);
+  }
+
+  // Final flash
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+  digitalWrite(12, HIGH);
+  delay(1000);
+  digitalWrite(12, LOW);
+  delay(1000);
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+  digitalWrite(12, HIGH);
+  delay(1000);
+  digitalWrite(12, LOW);
+}
+
+void loop() {
+  // Nothing here. One-time countdown only.
+}
